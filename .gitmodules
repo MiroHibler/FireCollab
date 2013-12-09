@@ -1,0 +1,6 @@
+[submodule "jot"]
+	path = jot
+	url = git://github.com/JoshData/jot.git
+[submodule "subclass"]
+	path = subclass
+	url = git://github.com/MiroHibler/SubclassJS.git

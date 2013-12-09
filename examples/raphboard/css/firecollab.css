@@ -1,0 +1,51 @@
+body {
+	background: #333;
+	color: #fff;
+	font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+	text-shadow: none;
+}
+
+#link {
+	top: 0;
+	position: absolute;
+	left: 1em;
+	text-align: left;
+}
+
+#link a {
+	color: #97B0F8;
+}
+
+#RaphBoard {
+	position: relative;
+	float: left;
+	width: 640px;
+	height: 480px;
+	background-image: url( "img/Pattern-blue.png" );
+	margin-bottom: 7px;
+}
+
+.raphboard {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 640px;
+	height: 480px;
+	margin: -240px 0 0 -320px;
+	background-image: url( "img/Pattern-blue.png" );
+}
+
+#copy {
+	bottom: 0;
+	position: absolute;
+	right: 1em;
+	text-align: right;
+}
+
+#copy a.fc {
+	color: #97B0F8;
+}
+
+#copy a.fb {
+	color: #FFDB00;
+}

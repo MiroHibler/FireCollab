@@ -1,0 +1,46 @@
+{
+	"name"			: "firecollab",
+	"version"		: "0.0.1",
+	"dependencies"	: {
+		"jot"		: "*",
+		"subclass"	: "*"
+	},
+
+	"optionalDependencies": {
+	},
+
+	"title"			: "FireCollab",
+	"description"	: "Collaboration powered by Firebase",
+	"keywords"		: [
+		"collaboration",
+		"edit",
+		"live",
+		"online",
+		"web",
+		"json",
+		"firebase"
+	],
+
+	"homepage"	: "http://MiroHibler.github.com/FireCollab/",
+	"demo"		: "http://MiroHibler.github.com/FireCollab/playground.html",
+	"docs"		: "http://MiroHibler.github.com/FireCollab/docs/",
+	"download"	: "http://MiroHibler.github.com/FireCollab/",
+	"bugs"		: "https://groups.google.com/d/forum/firecollab",
+
+	"licenses": [
+		{
+			"type"	: "MIT",
+			"url"	: "http://miro.mit-license.org"
+		}
+	],
+
+	"author": {
+		"name"	: "Miroslav Hibler",
+		"email"	: "miro@hibler.me",
+		"url"	: "http://miro.hibler.me/"
+	},
+
+	"readmeFilename"	: "README.md",
+
+	"copyright"	: "2013 Miroslav Hibler"
+}

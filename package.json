@@ -1,0 +1,32 @@
+{
+	"main"			: "dist/firecollab.js",
+	"directories"	: {
+		"test"	: "test",
+		"lib" 	: "lib"
+	},
+	"scripts"	: {
+		"test"		: "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies"		: {
+		"underscore"	: "*",
+		"googlediff"	: "*",
+		"deep-equal"	: "*"
+	},
+	"devDependencies"	: {
+		"connect"				: "*",
+		"grunt"					: "~0.4.1",
+		"grunt-shell"			: "~0.4.0",
+		"grunt-contrib-jshint"	: "~0.1.1",
+		"grunt-contrib-nodeunit": "~0.1.2",
+		"grunt-contrib-concat"	: "~0.1.2",
+		"grunt-contrib-uglify"	: "~0.2.0",
+		"grunt-contrib-copy"	: "~0.4.1",
+		"grunt-contrib-compress": "~0.4.7",
+		"grunt-contrib-clean"	: "~0.4.0",
+		"grunt-contrib-watch"	: "~0.2.0"
+	},
+	"repository"	: {
+		"type"	: "git",
+		"url"	: "git://github.com/MiroHibler/FireCollab.git"
+	}
+}

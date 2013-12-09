@@ -1,15 +1,8 @@
-lib-cov
-*.seed
+# Common stuff
+.DS_Store
+build/
+dist/
 *.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
 
-pids
-logs
-results
-
-npm-debug.log
+# NodeJS stuff
 node_modules

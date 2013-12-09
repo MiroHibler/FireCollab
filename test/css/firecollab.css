@@ -1,0 +1,41 @@
+body {
+	background: #333;
+	color: #fff;
+	font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+	text-shadow: none;
+}
+
+#JSONEditor {
+	width: 500px;
+	height: 1000px;
+	margin-right: 10px;
+	position: relative;
+	float: left;
+	background-color: white;
+}
+
+#RaphBoard {
+	position: relative;
+	float: left;
+	width: 640px;
+	height: 480px;
+	background-image: url( "img/Pattern-blue.png" );
+	margin-bottom: 7px;
+}
+
+.raphboard {
+	position: relative;
+	float: left;
+	height: 500px;
+}
+
+#copy {
+	font: 300 .7em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+	text-align: right;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+}
+
+#copy a {
+	color: #fff;
+}

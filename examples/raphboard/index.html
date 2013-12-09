@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>FireCollab</title>
+
+	<link rel="stylesheet" type="text/css" href="css/firecollab.css">
+</head>
+
+<body>
+	<p id="link">Click <a href="" target="_blank">here</a> to open another window (or tab) to see how it works!</p>
+	<div class="raphboard">
+		<div id="RaphBoard"></div>
+	</div>
+	<p id="copy"><a class="fc" href="https://github.com/MiroHibler/FireCollab">FireCollab.Draw</a> - Collaborative drawing board powered by <a class="fb" href="http://firebase.com">Firebase</a></p>
+
+	<!-- Firebase -->
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<!-- Submodules -->
+	<script type="text/javascript" src="../../build/out/js/jot.js"></script>
+	<script type="text/javascript" src="../../build/out/js/subclass.js"></script>
+
+	<!-- FireCollab -->
+	<script type="text/javascript" src="../../build/out/js/firecollab.js"></script>
+
+
+	<!-- RaphBoard -->
+	<!-- script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script -->
+	<script type="text/javascript" src="js/raphael.js"></script>
+	<script type="text/javascript" src="js/raphael.free_transform.js"></script>
+	<script type="text/javascript" src="js/raphboard.js"></script>
+	<script type="text/javascript" src="js/raphboard.firecollab.js"></script>
+
+	<script type="text/javascript" >
+
+		var jsonEditorAdapter,
+			jsonEditor,
+			raphBoardAdapter,
+			raphBoard,
+			doc = [{
+				command	: "text",
+				element : {
+					"data" : {
+						"ft" : {
+							"attrs" : {
+								"x"			: 141,
+								"y"			: 162.1875,
+								"size" : {
+									"x"		: 263,
+									"y"		: 53.625
+								},
+								"center" : {
+									"x"		: 272.5,
+									"y"		: 189
+								},
+								"rotate"	: 0,
+								"scale" : {
+									"x"		: 1,
+									"y"		: 1
+								},
+								"translate" : {
+									"x"		: 49,
+									"y"		: 17
+								},
+								"ratio"		: 1
+							}
+						}
+					},
+					"type"	: "text",
+					"attrs" : {
+						"x"					: 141,
+						"y"					: 189,
+						"text-anchor"		: "start",
+						"text"				: "Hello World!",
+						"font"				: "10px \"Arial\"",
+						"stroke"			: "#FFF",
+						"fill"				: "#FFF",
+						"stroke-width"		: 1,
+						"stroke-linecap"	: "round",
+						"stroke-linejoin"	: "round",
+						"font-size"			: 48
+					},
+					"transform"	: "t49,17",
+					"id"		: 43
+				}
+			}];
+
+		jQuery( document ).ready( function( $ ) {
+			var id = window.location.hash.replace( /#/g, '' ) || randomString( 10 );
+			var url = window.location.toString().replace( /#.*/, '' ) + '#' + id;
+			$( "#link a" ).attr( "href", url );
+
+			FireCollab.initDB( "https://firecollab.firebaseio.com/" + id );
+
+			// Initialize RaphBoard
+			raphBoardAdapter = new RaphBoardAdapter( "RaphBoard" );
+			raphBoardAdapter
+				.on( "init", initBoard )
+				.on( "update", updateBoard );
+			FireCollab.register( raphBoardAdapter );
+
+			window.location = url;
+		});
+
+		function initBoard( content ) {
+			raphBoard = raphBoardAdapter.board;
+
+			raphBoardAdapter.set( content !== null ? content : doc );
+		}
+
+		function updateBoard( op, opMetadata ) {
+			raphBoardAdapter.update( op, raphBoard.elements );
+		}
+
+	</script>
+</body>
+</html>
