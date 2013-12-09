@@ -1,6 +1,7 @@
 # Common stuff
 .DS_Store
-build/
+build/bower/
+build/out/examples/
 dist/
 *.log
 

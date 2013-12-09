@@ -1,4 +1,5 @@
-# FireCollab - Collaboration powered by [Firebase](http://firebase.com)
+# FireCollab
+## Collaboration powered by [Firebase](http://firebase.com)
 
 FireCollab is a collaboration framework made to simplify building collaborative web apps.
 

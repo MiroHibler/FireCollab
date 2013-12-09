@@ -1,6 +1,6 @@
-# FireCollab - Collaboration powered by [Firebase](http://firebase.com)
+## FireCollab - Collaboration powered by [Firebase](http://firebase.com)
 
-## Examples
+### Examples
 
 Install [5 min fork](http://5minfork.com/) browser extension to see these examples on GitHub without even downloading anything!
 
