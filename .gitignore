@@ -4,6 +4,7 @@ build/bower/
 build/out/examples/
 dist/
 *.log
+*.swp
 
 # NodeJS stuff
 node_modules

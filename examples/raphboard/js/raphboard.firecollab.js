@@ -242,7 +242,7 @@ function RaphBoardAdapter ( containerID, dbName ) {
 							if ( board.undoBuffer.length > self._undoBufferCount ) {
 								var id = board.undoBuffer[ board.undoBuffer.length - 1 ].element.id;
 								for ( var i = 0; i < self._oldElements.length; i++ ) {
-									if ( self._oldElements[i].id === id ) {
+									if ( self._oldElements[i].element.id === id ) {
 										_removeElement( self, i, self._oldElements[i] );
 										self._oldElements = null;
 										break;
