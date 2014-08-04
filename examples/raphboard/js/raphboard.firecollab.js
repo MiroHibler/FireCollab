@@ -376,11 +376,16 @@ function RaphBoardAdapter ( containerID, dbName ) {
 						})
 						.on( "before_clear", function( board ) {
 							self._undoBufferCount = board.undoBuffer.length;
+							self._oldElements = JSON.parse( board.toJSON() );
 							return true;
 						})
 						.on( "after_clear", function( board ) {
 							if ( board.undoBuffer.length > self._undoBufferCount ) {
-
+								self._nOfOldElements = self._oldElements.length;
+								while( self._oldElements.length) {
+									_removeElement( self, self._oldElements.length -1, self._oldElements.pop() );
+								}
+								self._oldElements = null;
 								// NO CLEAR YET!
 
 							}
